@@ -3,7 +3,6 @@ import json
 from watson_developer_cloud import VisualRecognitionV3
 import time
 
-
 app = Flask(__name__)
 
 @app.route('/')
