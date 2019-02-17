@@ -3,7 +3,7 @@
 <head>
     <title>Post an Image test</title>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
 </head>
 <style>
     /* mirror the image */
@@ -24,8 +24,7 @@
     </div>
     <div id="results">
       <h2>Results of your Analysis</h2>
-      <p id="opt1">You look a little tired! Here are some tips on how to take better care of yourself</p>
-      <p id="opt2">You look energetic and healthy.</p>
+      <p id="opt1"></p>
     </div>
 
 
@@ -44,10 +43,17 @@
         let xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://localhost:5000/images', true);
         xhr.onload = function () {
-            if (this.status === 200)
-                console.log(this.response);
-            else
+            if (this.status === 200) {
+                var text = '';
+                if (this.response === 'True') {
+                    text = 'You look a little tired! Here are some tips on how to take better care of yourself'
+                } else {
+                    text = 'You look energetic and healthy.'
+                }
+                document.getElementById('opt1').textContent = text;
+            } else {
                 console.error(xhr);
+            }
         };
         xhr.send(formdata);
     }
