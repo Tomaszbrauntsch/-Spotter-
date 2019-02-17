@@ -1,8 +1,7 @@
-# 2face
-This Project used:<br/>
+<h1><b>This Project used:</b></h1><br/>
 <b><i>IBM Watson</i></b> - for the facial visualization
 
-Our focus was on the path of <b>Health and Well-being</b>
+<br/>Our focus was on the path of <b>Health and Well-being</b>
 <h1><b><u>Installation</u></b></h1>
 The packages that are required to run are: <br/>
 flask<br/>
