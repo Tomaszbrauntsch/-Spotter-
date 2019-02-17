@@ -29,11 +29,11 @@ def image():
     print(json.dumps(classes, indent=2))
 
     if (classes['images'][0]['classifiers'][0]['classes'][0]['score']) > 0.5:
-        isTired = True
+        isTired = 'True'
     else:
-        isTired = False
+        isTired = 'False'
 
-    return render_template('index.html', isTired=isTired)
+    return Response(isTired)
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0')
