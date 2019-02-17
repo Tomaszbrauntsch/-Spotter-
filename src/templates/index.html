@@ -3,7 +3,7 @@
 <head>
     <title>Post an Image test</title>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
 </head>
 <style>
     /* mirror the image */
@@ -24,8 +24,11 @@
     </div>
     <div id="results">
       <h2>Results of your Analysis</h2>
+        {% if isTired %}
       <p id="opt1">You look a little tired! Here are some tips on how to take better care of yourself</p>
+        {% else %}
       <p id="opt2">You look energetic and healthy.</p>
+        {% endif %}
     </div>
 
 
