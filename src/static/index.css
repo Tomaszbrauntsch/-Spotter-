@@ -1,3 +1,8 @@
+body,html{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
 body {
   margin: 0;
   padding: 0;
@@ -13,19 +18,26 @@ code {
     monospace;
 }
 
-#myVideo {
-	background-color: grey;
-	width: 100%;
-}
-
-#explanation{
-	padding: 10px;
-}
-
 #results{
-	padding: 10px;
+  position:relative;
+  top:10%;
+  margin-top: -30%;
+  margin-left: 15%;
+
 }
 
-#snapshot{
-	margin-left: 45%;
+#myVideo {
+	width: 150%;
+
+}
+
+.titletext{
+  font-size:0.5em;
+  text-align:center;
+  text-shadow: 0px 3px 0px #b2a98f,
+               0px 14px 10px rgba(0,0,0,0.15),
+               0px 24px 2px rgba(0,0,0,0.1),
+               0px 34px 30px rgba(0,0,0,0.1);
+	color: #222;
+  font-size:4em;
 }

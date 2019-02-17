@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Post an Image test</title>
+    <title>Spotter</title>
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/index.css">
 </head>
@@ -12,21 +12,21 @@
     -webkit-transform: scale(-1, 1); /*for Chrome & Opera (& Safari) */
 }
 </style>
+<div id="textbackground">
 <body>
-    <div id="explanation">
-      <h1>What does your face say about your wellbeing?</h1>
+    <h1 class="titletext">&lt;Spotter&gt;</h1>
       <p>Your facial cues, your eyes and yor skin say a lot about how you are feeling, the nutriens you put into your Body and if you're getting enough sleep or not. We look in the mirror at least a dozen times a day, but sometimes we can overlook these cues, because we are so used to seeing our own face.</p>
       <p>We have built this website specifically to analyze your facial cues without the bias that it is our own face and pure algorithm rationality.</p>
       <p>press the button below to take a picture of your face. The results will automatically be analyzed.</p>
-    </div>
+  </div>
     <div>
-        <video id="myVideo" autoplay></video>
+        <video width="711" height="400" id="myVideo" autoplay></video>
     </div>
     <div id="results">
       <h2>Results of your Analysis</h2>
       <p id="opt1"></p>
     </div>
-
+</div>
 
 <script>
 
@@ -46,7 +46,7 @@
             if (this.status === 200) {
                 var text = '';
                 if (this.response === 'True') {
-                    text = 'You look a little tired! Here are some tips on how to take better care of yourself'
+                    text = 'You look tired! Get some sleep!'
                 } else {
                     text = 'You look energetic and healthy.'
                 }

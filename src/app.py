@@ -28,7 +28,7 @@ def image():
          classifier_ids='DefaultCustomModel_626967875').get_result()
     print(json.dumps(classes, indent=2))
 
-    if (classes['images'][0]['classifiers'][0]['classes'][0]['score']) > 0.5:
+    if (classes['images'][0]['classifiers'][0]['classes'][0]['score']) > 0.02:
         isTired = 'True'
     else:
         isTired = 'False'
