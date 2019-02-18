@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, Response, render_template
 import json
 from watson_developer_cloud import VisualRecognitionV3
@@ -30,9 +31,10 @@ def image():
 
     if (classes['images'][0]['classifiers'][0]['classes'][0]['score']) > 0.2:
         isTired = 'True'
+        os.system('rm image.jpeg')
     else:
         isTired = 'False'
-
+        os.system('rm image.jpeg')
     return Response(isTired)
 
 if __name__ == '__main__':
