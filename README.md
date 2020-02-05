@@ -10,7 +10,7 @@ watson_developer_cloud
 
 <h1><b><u>How to run</u></b></h1>
 Run the app.py in a terminal as: python app.py
-Go to your browser and type in the urlbar: localhost:5000
+Go to your browser and type in to the address bar: localhost:5000
 
 <h1><b><u>Usage</u></b></h1>
 Click on the video stream<br/>
